@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>My list of Video Categories</title>
+	</head>
+
+	<body>
+		<p th:utext="#{site.welcome}">Welcome to the Rainforest</p>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+			</tr>
+			<tr th:each="category:${categories}">
+				<td th:text="${category.id}">Id</td>
+				<td th:text="${category.name}">Name</td>
+			</tr>
+		</table>
+		<p>Time here is <span th:text=${now}>2020-20-20 20:20</span></p>
+	</body>
+</html>
